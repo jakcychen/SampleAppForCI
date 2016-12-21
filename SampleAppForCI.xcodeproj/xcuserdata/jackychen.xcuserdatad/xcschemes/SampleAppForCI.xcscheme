@@ -28,6 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6D44EB161E07DC2F000435B6"
+               BuildableName = "CucumberishUITest.xctest"
+               BlueprintName = "CucumberishUITest"
+               ReferencedContainer = "container:SampleAppForCI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6D7AF4C11E08C20E00BA832E"
+               BuildableName = "SampleAppForCIUITests.xctest"
+               BlueprintName = "SampleAppForCIUITests"
+               ReferencedContainer = "container:SampleAppForCI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6D7AF4D11E092F6400BA832E"
+               BuildableName = "SampleAppForCITests.xctest"
+               BlueprintName = "SampleAppForCITests"
+               ReferencedContainer = "container:SampleAppForCI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

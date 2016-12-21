@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CucumberishUITest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>SampleAppForCI.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,21 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>6D44EB161E07DC2F000435B6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6D7AF4C11E08C20E00BA832E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6D7AF4D11E092F6400BA832E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6D93E9361E03E5B4001C9F45</key>
 		<dict>
 			<key>primary</key>
