@@ -23,6 +23,7 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EkQ-uE-BYf">
                                 <rect key="frame" x="30" y="134" width="354" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Password"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="srl-EZ-XFp"/>
                                 </constraints>
@@ -47,6 +48,9 @@
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kh6-Op-ZZX">
                                 <rect key="frame" x="30" y="60" width="354" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="ID">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="dEN-Y6-DUM"/>
                                 </constraints>
