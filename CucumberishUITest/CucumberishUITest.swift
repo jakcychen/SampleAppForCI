@@ -34,6 +34,7 @@ class CucumberishUITest: NSObject {
             
             When("tape SignIn") { (args, userInfo) -> Void in
                 app.buttons["SignIn"].tap()
+                XCTAssertTrue(false)
             }
             
             Then("dismiss SignIn Page") { (args, userInfo) -> Void in

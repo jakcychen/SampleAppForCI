@@ -580,24 +580,28 @@
 					6D44EB161E07DC2F000435B6 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = NAX24929CJ;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 6D93E9361E03E5B4001C9F45;
 					};
 					6D7AF4C11E08C20E00BA832E = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = NAX24929CJ;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 6D93E9361E03E5B4001C9F45;
 					};
 					6D7AF4D11E092F6400BA832E = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = NAX24929CJ;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 6D93E9361E03E5B4001C9F45;
 					};
 					6D93E9361E03E5B4001C9F45 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = NAX24929CJ;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
