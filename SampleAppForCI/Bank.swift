@@ -12,6 +12,7 @@ class Bank: NSObject
 {
     static func CalculateBalance(capital: Float!, interest: Float!)->Float!
     {
+        var test = 123
         return capital + capital * interest
     }
 }
