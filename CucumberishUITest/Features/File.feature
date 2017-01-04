@@ -2,7 +2,7 @@ Feature: Bank Account
 
 Scenario: SignIn
 
-Given ID is Jacky
+Given ID is "Jacky"
 And Password is 12345678
 When tape SignIn
 Then dismiss SignIn Page
@@ -17,8 +17,8 @@ Then balance becomes <endBalance>
 
 Examples:
 | initialBalance | interestRate | endBalance |
-| 1000.00 |  0.05 | 1050.00 |
-| 2000.00 |  0.03 | 2060.00 |
+| 1000 |  0.05 | 1050.00 |
+| 2000 |  0.03 | 2060.00 |
 
 
 Scenario: SignOut

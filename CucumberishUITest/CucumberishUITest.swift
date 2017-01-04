@@ -17,19 +17,19 @@ class CucumberishUITest: NSObject {
 
         // MARK: - SignIn
         
-        Given("ID is Jacky") { (args, userInfo) -> Void in
+        Given("^ID is \"(.*)\"$") { (args, userInfo) -> Void in
             
             let app = XCUIApplication()
             app.launch()
             
             let idTextField = app.textFields["ID"]
             idTextField.tap()
-            idTextField.typeText("Jacky")
+            idTextField.typeText((args?[0])!)
             
-            And("Password is 12345678") { (args, userInfo) -> Void in
+            And("^Password is (.*)$") { (args, userInfo) -> Void in
                 let passwordTextField = app.textFields["Password"]
                 passwordTextField.tap()
-                passwordTextField.typeText("12345678")
+                passwordTextField.typeText((args?[0])!)
             }
             
             When("tape SignIn") { (args, userInfo) -> Void in
@@ -46,52 +46,37 @@ class CucumberishUITest: NSObject {
             // MARK: - Calculate balance
             
             // Example1
-            Given("balance is 1000.00") { (args, userInfo) -> Void in
+            Given("^balance is ([0-9]+)$") { (args, userInfo) -> Void in
                 
                 let capitalTextField = app.textFields["Capital"]
                 capitalTextField.tap()
-                capitalTextField.typeText("1000")
                 
-                And("annual interest rate is 0.05") { (args, userInfo) -> Void in
+                if capitalTextField.buttons["Clear text"].exists
+                {
+                    capitalTextField.buttons["Clear text"].tap()
+                }
+                
+                capitalTextField.typeText( (args?[0])! )
+                
+                And("^annual interest rate is ([0-9]+(.[0-9]{1,2})?)$") { (args, userInfo) -> Void in
                     let interestTextField = app.textFields["Interest"]
                     interestTextField.tap()
-                    interestTextField.typeText("0.05")
+                    
+                    if interestTextField.buttons["Clear text"].exists
+                    {
+                        interestTextField.buttons["Clear text"].tap()
+                    }
+                    
+                    interestTextField.typeText( (args?[0])! )
                 }
                 
                 When("calculate interest") { (args, userInfo) -> Void in
                     app.buttons["Calculate"].tap()
                 }
                 
-                Then("balance becomes 1050.00") { (args, userInfo) -> Void in
+                Then("balance becomes ([0-9]+(.[0-9]{1,2})?)$") { (args, userInfo) -> Void in
                     
-                    XCTAssertEqual(app.staticTexts["Balance"].label, "1050.0")
-                }
-            }
-            
-            // Example2
-            Given("balance is 2000.00") { (args, userInfo) -> Void in
-                
-                let capitalTextField = app.textFields["Capital"]
-                capitalTextField.tap()
-                
-                capitalTextField.buttons["Clear text"].tap()
-                capitalTextField.typeText("2000")
-                
-                And("annual interest rate is 0.03") { (args, userInfo) -> Void in
-                    let interestTextField = app.textFields["Interest"]
-                    interestTextField.tap()
-                    
-                    interestTextField.buttons["Clear text"].tap()
-                    interestTextField.typeText("0.03")
-                }
-                
-                When("calculate interest") { (args, userInfo) -> Void in
-                    app.buttons["Calculate"].tap()
-                }
-                
-                Then("balance becomes 2060.00") { (args, userInfo) -> Void in
-                    
-                    XCTAssertEqual(app.staticTexts["Balance"].label, "2060.0")
+                    XCTAssertEqual(app.staticTexts["Balance"].label, (args?[0])!)
                 }
             }
             

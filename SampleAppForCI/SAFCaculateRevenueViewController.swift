@@ -29,7 +29,7 @@ class SAFCaculateRevenueViewController: UIViewController {
         let capital: Float! = Float(capitalText.text!)
         let interest: Float! = Float(interestText.text!)
         
-        revenueLabel.text = String( Bank.CalculateBalance(capital: capital, interest: interest) )
+        revenueLabel.text = String(format: "%.2f", Bank.CalculateBalance(capital: capital, interest: interest))
     }
     
     override func viewDidLoad()
