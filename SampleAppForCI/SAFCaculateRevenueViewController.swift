@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveSwift
 
 class SAFCaculateRevenueViewController: UIViewController {
 
@@ -41,6 +42,8 @@ class SAFCaculateRevenueViewController: UIViewController {
             self.performSegue(withIdentifier: "toSignInSegue", sender: nil)
             return
         }
+        
+        
     }
     
 //    func calculateBalance(capital: Float!, interest: Float!)->Float!

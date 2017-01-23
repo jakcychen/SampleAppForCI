@@ -64,10 +64,16 @@
 		6D7AF4CD1E08D72D00BA832E /* SAFCaculateRevenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7AF4CC1E08D72D00BA832E /* SAFCaculateRevenueViewController.swift */; };
 		6D7AF4D51E092F6500BA832E /* SampleAppForCITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7AF4D41E092F6500BA832E /* SampleAppForCITests.swift */; };
 		6D7AF4DD1E092FB500BA832E /* Bank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7AF4DC1E092FB500BA832E /* Bank.swift */; };
+		6D82D4001E35D7170078FCF9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D82D3FF1E35D7170078FCF9 /* Alamofire.framework */; };
+		6D82D4011E35D7170078FCF9 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D82D3FF1E35D7170078FCF9 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6D93E93B1E03E5B4001C9F45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D93E93A1E03E5B4001C9F45 /* AppDelegate.swift */; };
 		6D93E9401E03E5B4001C9F45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D93E93E1E03E5B4001C9F45 /* Main.storyboard */; };
 		6D93E9421E03E5B4001C9F45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D93E9411E03E5B4001C9F45 /* Assets.xcassets */; };
 		6D93E9451E03E5B4001C9F45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D93E9431E03E5B4001C9F45 /* LaunchScreen.storyboard */; };
+		6DD39E181E35A45A004005FD /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD39E171E35A45A004005FD /* ReactiveSwift.framework */; };
+		6DD39E191E35A45A004005FD /* ReactiveSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD39E171E35A45A004005FD /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6DD39E1C1E35A4B3004005FD /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD39E1B1E35A4B3004005FD /* Result.framework */; };
+		6DD39E1D1E35A4B3004005FD /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DD39E1B1E35A4B3004005FD /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +99,22 @@
 			remoteInfo = SampleAppForCI;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6DD39E1A1E35A45A004005FD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6DD39E191E35A45A004005FD /* ReactiveSwift.framework in Embed Frameworks */,
+				6D82D4011E35D7170078FCF9 /* Alamofire.framework in Embed Frameworks */,
+				6DD39E1D1E35A4B3004005FD /* Result.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6D44EB0E1E07D959000435B6 /* SAFSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAFSignInViewController.swift; sourceTree = "<group>"; };
@@ -215,12 +237,15 @@
 		6D7AF4D41E092F6500BA832E /* SampleAppForCITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAppForCITests.swift; sourceTree = "<group>"; };
 		6D7AF4D61E092F6500BA832E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D7AF4DC1E092FB500BA832E /* Bank.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bank.swift; sourceTree = "<group>"; };
+		6D82D3FF1E35D7170078FCF9 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		6D93E9371E03E5B4001C9F45 /* SampleAppForCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleAppForCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D93E93A1E03E5B4001C9F45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D93E93F1E03E5B4001C9F45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D93E9411E03E5B4001C9F45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D93E9441E03E5B4001C9F45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D93E9461E03E5B4001C9F45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DD39E171E35A45A004005FD /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		6DD39E1B1E35A4B3004005FD /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +281,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DD39E181E35A45A004005FD /* ReactiveSwift.framework in Frameworks */,
+				6D82D4001E35D7170078FCF9 /* Alamofire.framework in Frameworks */,
+				6DD39E1C1E35A4B3004005FD /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +484,9 @@
 		6D93E92E1E03E5B4001C9F45 = {
 			isa = PBXGroup;
 			children = (
+				6D82D3FF1E35D7170078FCF9 /* Alamofire.framework */,
+				6DD39E1B1E35A4B3004005FD /* Result.framework */,
+				6DD39E171E35A45A004005FD /* ReactiveSwift.framework */,
 				6D93E9391E03E5B4001C9F45 /* SampleAppForCI */,
 				6D44EB181E07DC2F000435B6 /* CucumberishUITest */,
 				6D7AF4C31E08C20E00BA832E /* SampleAppForCIUITests */,
@@ -557,6 +588,8 @@
 				6D93E9331E03E5B4001C9F45 /* Sources */,
 				6D93E9341E03E5B4001C9F45 /* Frameworks */,
 				6D93E9351E03E5B4001C9F45 /* Resources */,
+				6DD39E1A1E35A45A004005FD /* Embed Frameworks */,
+				6DC9D4A51E35E23C0063A59D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -669,6 +702,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DC9D4A51E35E23C0063A59D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6D44EB101E07DC2F000435B6 /* Sources */ = {
@@ -992,6 +1045,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = NAX24929CJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SampleAppForCI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.cathaylife.SampleAppForCI;
@@ -1006,6 +1063,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = NAX24929CJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SampleAppForCI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tw.com.cathaylife.SampleAppForCI;

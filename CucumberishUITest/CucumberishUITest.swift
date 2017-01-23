@@ -6,15 +6,13 @@
 
 import Foundation
 import XCTest
-
 class CucumberishUITest: NSObject {
     class func CucumberishSwiftInit()
     {
-        //A closure that will be executed just before executing any of your features
         beforeStart { () -> Void in
             
         }
-
+        
         // MARK: - SignIn
         
         Given("^ID is \"(.*)\"$") { (args, userInfo) -> Void in
@@ -34,7 +32,7 @@ class CucumberishUITest: NSObject {
             
             When("tape SignIn") { (args, userInfo) -> Void in
                 app.buttons["SignIn"].tap()
-//                XCTAssertTrue(false)
+                //                XCTAssertTrue(false)
             }
             
             Then("dismiss SignIn Page") { (args, userInfo) -> Void in
@@ -101,5 +99,4 @@ class CucumberishUITest: NSObject {
         //Tell Cucumberish the name of your features folder and let it execute them for you...
         Cucumberish.executeFeatures(inDirectory: "Features", includeTags: nil, excludeTags: nil)
     }
-    
 }
