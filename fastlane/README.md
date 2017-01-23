@@ -16,6 +16,11 @@ Run unit test and export to Reports/Test/
 fastlane ios code_coverage
 ```
 Code Coverage
+### ios export
+```
+fastlane ios export
+```
+export archive and ipa
 
 ----
 

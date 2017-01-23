@@ -19,4 +19,19 @@ platform :ios do
     slather(output_directory: "Reports/Code_Coverage", proj: "SampleAppForCI.xcodeproj", scheme: "SampleAppForCI", cobertura_xml: true, ignore: ["../*"])
   end
 
+  desc "export archive and ipa"
+  lane :export do |options|
+    gym(
+      project: "SampleAppForCI.xcodeproj",
+      scheme: "SampleAppForCI",
+      silent: true,
+      clean: true,
+      output_directory: "Export/"+options[:path], # Destination directory. Defaults to current directory.
+      output_name: "SampleAppForCI.ipa",       # specify the name of the .ipa file to generate (including file extension)
+      export_method: "enterprise",
+      archive_path: "Export/SampleAppForCI.xcarchive"
+      #sdk: "10.0"  # use SDK as the name or path of the base SDK when building the project.
+    )
+  end
+
 end
