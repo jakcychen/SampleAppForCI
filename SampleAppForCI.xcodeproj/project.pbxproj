@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D3818961E6FB358008CEC94 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3818941E6FB358008CEC94 /* Fabric.framework */; };
+		6D3818971E6FB358008CEC94 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D3818951E6FB358008CEC94 /* Crashlytics.framework */; };
 		6D44EB0F1E07D959000435B6 /* SAFSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D44EB0E1E07D959000435B6 /* SAFSignInViewController.swift */; };
 		6D44EB1A1E07DC2F000435B6 /* CucumberishUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D44EB191E07DC2F000435B6 /* CucumberishUITest.swift */; };
 		6D44EB1E1E07DC2F000435B6 /* CucumberishUITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D44EB1D1E07DC2F000435B6 /* CucumberishUITest.m */; };
@@ -117,6 +119,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6D3818941E6FB358008CEC94 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		6D3818951E6FB358008CEC94 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		6D44EB0E1E07D959000435B6 /* SAFSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAFSignInViewController.swift; sourceTree = "<group>"; };
 		6D44EB171E07DC2F000435B6 /* CucumberishUITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CucumberishUITest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D44EB191E07DC2F000435B6 /* CucumberishUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CucumberishUITest.swift; sourceTree = "<group>"; };
@@ -282,8 +286,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DD39E181E35A45A004005FD /* ReactiveSwift.framework in Frameworks */,
+				6D3818971E6FB358008CEC94 /* Crashlytics.framework in Frameworks */,
 				6D82D4001E35D7170078FCF9 /* Alamofire.framework in Frameworks */,
 				6DD39E1C1E35A4B3004005FD /* Result.framework in Frameworks */,
+				6D3818961E6FB358008CEC94 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +490,8 @@
 		6D93E92E1E03E5B4001C9F45 = {
 			isa = PBXGroup;
 			children = (
+				6D3818941E6FB358008CEC94 /* Fabric.framework */,
+				6D3818951E6FB358008CEC94 /* Crashlytics.framework */,
 				6D82D3FF1E35D7170078FCF9 /* Alamofire.framework */,
 				6DD39E1B1E35A4B3004005FD /* Result.framework */,
 				6DD39E171E35A45A004005FD /* ReactiveSwift.framework */,
@@ -589,7 +597,8 @@
 				6D93E9341E03E5B4001C9F45 /* Frameworks */,
 				6D93E9351E03E5B4001C9F45 /* Resources */,
 				6DD39E1A1E35A45A004005FD /* Embed Frameworks */,
-				6DC9D4A51E35E23C0063A59D /* ShellScript */,
+				6DC9D4A51E35E23C0063A59D /* Run Garthage Script */,
+				6D3818921E6FB0F5008CEC94 /* Run Fabric Script */,
 			);
 			buildRules = (
 			);
@@ -704,7 +713,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6DC9D4A51E35E23C0063A59D /* ShellScript */ = {
+		6D3818921E6FB0F5008CEC94 /* Run Fabric Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Fabric Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 210cae29d9313bf20a7895e227a817eb0d9bac8d aed6f83a6637179425f954b9195885e2f6098123bc1034566cc0f6eae3bf7be8";
+		};
+		6DC9D4A51E35E23C0063A59D /* Run Garthage Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -715,6 +738,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 			);
+			name = "Run Garthage Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1048,6 +1072,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SampleAppForCI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1066,6 +1091,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = SampleAppForCI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

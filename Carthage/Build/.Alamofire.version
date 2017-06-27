@@ -1,0 +1,10 @@
+{
+  "xcodeVersion" : "Xcode 8.3.2\nBuild version 8E2002",
+  "commitish" : "4.3.0",
+  "iOS" : [
+    {
+      "hash" : "e5bed50c76692d57d4c47ed4b480cdcd78d14d2fd4af22118c9b874d69f97b18",
+      "name" : "Alamofire"
+    }
+  ]
+}
