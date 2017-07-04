@@ -1,2 +1,1 @@
-github "ReactiveCocoa/ReactiveCocoa" ~> 5.0
-github "Alamofire/Alamofire" ~> 4.3
+github "Ahmed-Ali/Cucumberish" == 1.0.6

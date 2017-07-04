@@ -1,0 +1,10 @@
+{
+  "xcodeVersion" : "Xcode 8.3.2\nBuild version 8E2002",
+  "commitish" : "v1.0.6",
+  "iOS" : [
+    {
+      "hash" : "b3f5c1377a487871ee451bf723726bf61398c026ba47b443730e6e30c5cf99b2",
+      "name" : "Cucumberish"
+    }
+  ]
+}

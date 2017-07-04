@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ReactiveSwift
+//import ReactiveSwift
 
 class SAFCaculateRevenueViewController: UIViewController {
 

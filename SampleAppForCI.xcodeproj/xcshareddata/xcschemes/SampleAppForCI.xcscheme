@@ -58,6 +58,26 @@
                ReferencedContainer = "container:SampleAppForCI.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6D9D93901EFD10480038B285"
+               BuildableName = "CucumberTests.xctest"
+               BlueprintName = "CucumberTests"
+               ReferencedContainer = "container:SampleAppForCI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6D9D93B61EFD16580038B285"
+               BuildableName = "SampleAppForCICucumberTests.xctest"
+               BlueprintName = "SampleAppForCICucumberTests"
+               ReferencedContainer = "container:SampleAppForCI.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
