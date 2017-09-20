@@ -2,6 +2,11 @@ fastlane_version "2.6.0"
 
 default_platform :ios
 
+project = "SampleAppForCI"
+version_number = get_info_plist_value(path: "./"+project+"/Info.plist", key: "CFBundleShortVersionString")
+build_number = get_info_plist_value(path: "./"+project+"/Info.plist", key: "CFBundleVersion")
+path = version_number + "/" + build_number
+
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
@@ -11,27 +16,28 @@ platform :ios do
 
   desc "Run unit test and export to Reports/Test/"
   lane :test do
-    scan(scheme: "SampleAppForCI", clean: true, code_coverage: true, device: "iPhone 6", output_directory: "Reports/Test/")
+    scan(scheme: "SampleAppForCI", clean: true, code_coverage: true, device: "iPhone 7", output_directory: "Reports/Test/")
   end
 
   desc "Code Coverage"
   lane :code_coverage do
-    slather(output_directory: "Reports/Code_Coverage", proj: "SampleAppForCI.xcodeproj", scheme: "SampleAppForCI", cobertura_xml: true, ignore: ["../*"])
+    slather(output_directory: "Reports/Code_Coverage", proj: project+".xcodeproj", scheme: "SampleAppForCI", cobertura_xml: true, ignore: ["../*"])
   end
 
   desc "export archive and ipa"
-  lane :export do |options|
+  lane :export do
     gym(
-      project: "SampleAppForCI.xcodeproj",
+      project: project+".xcodeproj",
       scheme: "SampleAppForCI",
       silent: true,
       clean: true,
-      output_directory: "Export/"+options[:path], # Destination directory. Defaults to current directory.
-      output_name: "SampleAppForCI.ipa",       # specify the name of the .ipa file to generate (including file extension)
+      output_directory: "./Export/"+path, # Destination directory. Defaults to current directory.
+      output_name: project+".ipa",       # specify the name of the .ipa file to generate (including file extension)
       export_method: "enterprise",
-      archive_path: "Export/"+options[:path]+"/SampleAppForCI.xcarchive"
+      archive_path: "./Export/"+path+"/"+project+".xcarchive"
       #sdk: "10.0"  # use SDK as the name or path of the base SDK when building the project.
     )
+    upload_symbols_to_crashlytics(api_token: '210cae29d9313bf20a7895e227a817eb0d9bac8d')
   end
 
   #
@@ -51,15 +57,6 @@ platform :ios do
                    groups: groups,
                     notes: 'Distributed with fastlane', # Check out the changelog_from_git_commits action
             notifications: true) # Should this distribution notify your testers via email?
-
-    # for all available options run `fastlane action crashlytics`
-
-    # You can notify your team in chat that a beta build has been uploaded
-    # slack(
-    #   slack_url: "https://hooks.slack.com/services/YOUR/TEAM/INFO"
-    #   channel: "beta-releases",
-    #   message: "Successfully uploaded a beta release - see it at https://fabric.io/_/beta"
-    # )
   end
 
 end

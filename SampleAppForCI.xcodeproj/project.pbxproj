@@ -811,6 +811,7 @@
 				6D9D93A81EFD10480038B285 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
